@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Serxe Graal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="icon" type="image/x-icon" href="./img/p3.png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background-color:  #1E1E1E ;
+        }
+        h1  {
+            color: #F0F0F0 ;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2,h3{
+            color:  #F0F0F0;
+        }
+        p {
+            font-weight: 450;
+            color: #F0F0F0 ;
+        }
+        span{
+            color:  #FF4500;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h5{
+            color:  #FF4500;
+        }
+        .img{
+            width: 40%;
+            height: 40%;
+        }
+
+        .navbar {
+            border: 1px solid orangered;
+            border-radius: 10px;
+            margin-top: -2%;
+            z-index: 1000;
+            background-color: #1E1E1E;  
+        }
+        nav a {
+            font-weight: 450;
+            color: orangered;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li a {
+            margin: 0 12px;
+            font-weight: 450;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        ul li{
+            color: white;
+            font-weight: 450;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+        .card{
+            border: 1px solid orangered;
+            border-radius: 10px;
+            background: none;
+            
+            overflow: hidden;
+        }
+        .card img {
+            object-fit: cover;
+        }
+
+        .card-body img {
+            object-fit: contain;
+        }
+        #card-row:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(255, 68, 0, 0.450);
+
+        }
+        #card-row {
+            transition: transform 0.3s;
+            
+        }
+        #btn {
+            transition: transform 0.3s;
+            
+        }
+        #btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(255, 68, 0, 0.205);
+        }
+        .modal-content{
+            box-shadow: 0 4px 8px rgba(255, 68, 0, 0.397);
+            border: 1px solid orangered;
+        }
+        .modal-body{
+            background-color: #1E1E1E;
+        }
+        .social-media-icons a {
+            font-size: 1.5rem;
+            color: white;
+        }
+        label {
+            font-weight: 500;
+        }
+
+        input::placeholder {
+            font-weight: 500;
+        }
+
+        textarea::placeholder {
+            font-weight: 500;
+        }
+        .col-m-3 i{
+            transition: transform 0.3s;
+            color: #FF4500; 
+            font-size: 80px;
+            
+        }
+        .col-m-3 i:hover {
+            transform: scale(1.05);
+            color: #FF4500; 
+            font-size: 80px;
+            text-shadow: 0 4px 8px rgba(255, 68, 0, 0.205);
+        }
+
+
+        .card-body h3,
+        .card-body p {
+            color: white;
+        }
+        #social-media-row{
+            padding: 35px;
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            .navbar {
+                position: fixed;
+                top: 0;
+                z-index: 1000;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+            .title{
+                font-size: xx-large;
+            }
+            p{
+                font-size: smaller;
+            }
+            h2{
+                font-size: x-large;
+            }
+            h4{
+                font-size: medium;
+            }
+            li a{
+                font-size: medium;
+            }
+            li {
+                font-size: smaller;
+            }
+            .col-m-3 i{
+            font-size: 30px;
+            }
+            .col-m-3 i:hover {
+            transform: scale(1.05);
+            color: #FF4500; 
+            font-size: 30px;
+            text-shadow: 0 4px 8px rgba(255, 68, 0, 0.205);
+            }
+            .col-md-4 .card img{
+                height: 200px;
+                object-fit: contain;
+            }
+            .img{
+                width: 80%;
+                height: 80%;
+            }
+            #social-media-row{
+                padding: 15px;
+                margin-bottom: -5%;
+                margin-top: -5%;
+            }
+            
+        
+
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+
+
+    <!-- Front Panel -->
+    <section id="home">
+        <div class="container-fluid mb-5" style=" background: linear-gradient(360deg, #1E1E1E 0%, orangered 100%); margin-top: -4%; padding-top: 30px;">
+            <div class="container" >
+                <div class="row justify-content-center align-items-center mt-5">
+                    <div class="col-md-6">
+                        <br>
+                        <h1 class="title"><b>Welcome to my Website!</b></h1>
+                        <h1 class="title"><b><span>Serxe Graal</span></b></h1>
+                        
+                        <p></p>
+
+                        <div class="row d-flex mb-3 ml-auto mt-2">
+                            <a href="#contactus" id="btn" class="btn" style="background-color: orangered; font-weight: 470;">Contact Me</a>
+                            <a href="#socialmedia" class="btn ml-2" id="btn" style="font-weight: 400;  border: 2px solid orangered; color: orangered; background-color: none;">Social Media</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-2 d-flex justify-content-center align-items-center">
+                        <div class="card" style="border: none; width: 350px; height: 350px; background: none;">
+                            <img src="./img/p3.png" alt="Placeholder image" width="100%" height="100%" style="border-radius: 50%; border: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="container navbar navbar-expand-lg navbar-dark  justify-content-between mb-5">
+        <a class="navbar-brand" href="#" style="font-weight: 600;">
+            <img src="img/p3.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+            Serxe Graal
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me<span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Service<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Profile">Profile<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contactus" style="color:  orangered;">Contact Me<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--About Panel-->
+
+    
+    <section id="about" class="py-4">
+        <div class="container py-5" >
+            <h2 style="border-left: 3px solid orangered;" ><b class="ml-2"> ABOUT ME</b></h2>
+            <p>Here some of my information.</p>
+            <div class="row justify-content-center align-items-center ">
+                <!-- Picture -->
+                <div class="col-md-4">
+                    <div class="card" style="border: none; background: none; ">
+                        <img src="./img/p2.jpg" alt="Serxe Graal" width="100%" height="100%" style="border-radius: 5px;">
+                    </div>
+                </div>
+                <!-- Details -->
+                <div class="col-md-8">
+                    <h3><b>Sexe Graal</b></h3>
+<p>Hello! I'm passionate about gaming and web development, and this website serves as a hub for my adventures and projects in these exciting fields.</p>
+<p>In the gaming world, I thrive on exploring new realms, mastering gameplay mechanics, and connecting with fellow gamers. Whether it's diving into immersive storylines or competing in online battles, I'm always up for the challenge.</p>
+<p>On the web development front, I enjoy crafting responsive and user-friendly interfaces. From designing engaging websites to implementing the latest technologies like HTML5, CSS3, and Bootstrap, I'm dedicated to creating digital experiences that captivate and inspire.</p>
+<p>Join me on this journey as I combine my passion for gaming with my skills in web development. Together, let's explore the possibilities and push the boundaries of both worlds!</p>
+
+
+            </div>
+        </div>
+    </section>
+    
+  
+    <section  class="py-4" style="margin-top: -5%;">
+            <div class="container py-5 " >
+                <h2 style="border-left: 3px solid orangered;" id="h2"><b class="ml-2">SOCIAL MEDIA</b></h2>
+                <p id="p">Follow me for more!</p>
+                       <div class="container">
+                        <div class="row justify-content-between " id="social-media-row" style="border: 1px solid orangered; border-radius: 10px; background: linear-gradient(360deg, #1E1E1E 0%, rgba(255, 68, 0, 0.308) 100%);">
+                            <div class="col-m-3 mt-2" data-toggle="modal" data-target="#facebookModal">
+                                <i class="fab fa-facebook" data-toggle="modal" data-target="#facebookModal"></i>
+                                
+                            </div> 
+                            <div class="col-m-3 mt-2">
+                                <i class="fab fa-twitter"  data-toggle="modal" data-target="#twitterModal"></i>
+                                
+                            </div>
+                            <div class="col-m-3 mt-2">
+                                <i class="fab fa-telegram"  data-toggle="modal" data-target="#telegramModal"></i>
+                                
+                            </div>
+                            <div class="col-m-3 mt-2" data-target="#instagramModal" >
+                                <i class="fab fa-instagram" data-toggle="modal" data-target="#instagramModal"></i>
+                               
+                            </div>
+                        </div>
+                       </div>
+            
+
+        </div>
+    </section>
+
+    <!--SERVICEs-->
+    <section id="services" class="py-4">
+        <div class="container py-5" >
+            <h2 style="border-left: 3px solid orangered;" ><b class="ml-2">  SERVICE</b></h2>
+            <p>
+                Here some of my services that i offer.
+            </p>
+            <div class="accordion" id="resourcesAccordion">
+                <!-- School Policies Section -->
+                <div class="row">
+                    <div class="col-md-6 mt-2">
+                        <div class="card" style="background: linear-gradient(180deg, #1E1E1E 30%, rgba(255, 68, 0, 0.548) 100%);">
+                            <div class="card-header border-0" id="headingOne">
+                                <h2 class="mb-0">
+                                    <h5><b>Static Website</b></h5>
+
+                                    <button class="btn btn-block text-muted text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <b><u>What is Static Website?</u></b>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#resourcesAccordion">
+                                <div class="card-body" style="border-top: 1px solid black;">
+                                    
+                                    <img src="./img/p3.png" alt="Serxe Graal" width="100%" height="100%" style="border-radius: 5px; height: 300px;">
+                                    <p class="text-light">A static website is a website built with pages of static content, or plain HTML and CSS code. This content stays consistent regardless of the user or where the user is and offers little interactivity. <br><br><i>This is a example of static website.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mt-2" style="background: linear-gradient(180deg, #1E1E1E 30%, rgba(255, 68, 0, 0.548) 100%);">
+                            <div class="card-header border-0" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <h5><b>Other Details</b></h5>
+                                    <button class="btn btn-link btn-block text-muted text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                        <b><u>See Details</u></b>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#resourcesAccordion">
+                                <div class="card-body" style="border-top: 1px solid black;">
+                                    <h4 class="text-start text-light">Website Details:</h4>
+                                    <img src="./img/p3.png" alt="Sample Image" width="100%" style="border-radius: 5px;">
+                                    <p class="text-light">
+                                        <b>Price:</b> Price varies based on website requirements.<br>
+                                        <b>Creation Time:</b> 4 days<br>
+                                        <b>Design:</b> Custom designs accepted. Please discuss your ideas.<br>
+                                        <b>Payment Methods:</b> Gcash, Paymaya, PayPal<br>
+                                        <b>Responsiveness:</b> Bootstrap framework ensures the website is responsive across devices.<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card  border-0" style="width: 100%; max-height: 100%;" >
+                            <h4 class="text-light"><b>Hello there!</b></h4>
+                            <p class="text-light" style="font-size: 15px; ">I specialize in creating static websites tailored specifically for gaming content creators on platforms like YouTube and social media. My goal is to enhance your online presence with a unique approach that stands out from the competition. What sets my service apart is my commitment to delivering static websites that are visually appealing and perfectly suited for showcasing your content. These websites are designed to be fast-loading and efficient, ensuring a seamless user experience across all devices, including smartphones and tablets.</p>
+
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="container text-center">
+                <img src="img/p1.jpg" class="img" >
+            </div>
+            <h2 style="border-left: 3px solid orangered;" ><b class="ml-2">  TOOLS</b></h3>
+            <p>These are the tools that I use to create your website.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mt-2" id="card-row" >
+                        <div class="card-body h-100">
+                            <h5><i class="fab fa-html5"></i> HTML5</h5>
+                            <p>HTML5 is the latest evolution of the standard that defines HTML. It introduces new elements and attributes that allow for more diverse and powerful web applications. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-2" id="card-row" >
+                        <div class="card-body h-100">
+                            <h5><i class="fab fa-css3-alt"></i> CSS</h5>
+                            <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML. It controls the layout of multiple web pages all at once.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    
+                        <div class="card mt-2" id="card-row">
+                            <div class="card-body h-1">
+                                <h5><i class="fab fa-bootstrap"></i> BOOTSTRAP 5</h5>
+                                <p>Bootstrap 5 is a powerful front-end framework for developing responsive and mobile-first websites. Its extensive documentation and community support make it a go-to choice for developers.</p>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--Profile Panel-->
+    <section id="Profile" class="py-2">
+        <div class="container-fluid py-5 mt-5">
+            <div class="container mb-5" >
+                <h2 style="border-left: 3px solid orangered;"><b class="ml-2">GRAAL PROFILE</b></h2>
+                <p>Go check me on Graal Online Classic!</p>
+                <div class="row justify-content-center align-items-center g-2" style="  border-radius: 10px;">
+                    <div class="col-md-12 text-center" style="background: linear-gradient(180deg, #1E1E1E 0%, orangered 100%), url('img/graalaccount.jpg'); background-size: cover; background-repeat: no-repeat; border: 1px solid orangered; border-radius: 10px; background-blend-mode: overlay;">
+                        <img src="img/p3.png" class="mt-5 mb-5" width="28%" style="border-radius: 50%; border: 1px solid orangered; background: linear-gradient(180deg, #1E1E1E 0%, orangered 100%);">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </section>
+    
+
+
+    <!--Footer & Contact Us-->
+    <section id="contactus"  >
+        <footer class="text-dark" style="background: linear-gradient(180deg, #1E1E1E 0%, orangered 100%);">
+            <div class="container mt-3">
+                <div class="d-flex justify-content-start">
+                    <h2 style="border-left: 3px solid orangered;" ><b class="ml-2">  CONTACT ME</b></h2>
+                </div>
+                <p class="text-start">Stay connected with me.</b></p>
+                
+                <div class="row">
+                    <!-- Company Information -->
+
+                    <div class="col-md-4">
+                        <h5><b>Serxe Graal</b></h5>
+<p>Hello, and welcome to my personal game account page for Serxe Graal. This website serves as a dedicated space for my game-related activities, updates, and achievements. Stay tuned for new content, progress updates, and insights into my journey in the game. Thank you for visiting!</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-md-4">
+                        <div class="d-flex">
+                            <h5 ><b><u>Quick Links</u></b></h5> <i class="fas fa-link  ml-2 mt-1" style="font-size: larger; color: orangered;"></i>
+                        </div>
+                        <ul class="list-unstyled d-block">
+                            <li><a href="#home" >Home</a></li>
+                            <li><a href="#about" >About Me</a></li>
+                            <li><a href="#socialmedia" >Social Media</a></li>
+                            <li><a href="#services" >Services</a></li>
+                            <li><a href="#Profile" >Profile</a></li>
+                        </ul>
+                    </div>
+                    <!-- Social Media -->
+                    <div class="col-md-4">
+                        <div class="d-flex">
+                            <h5 ><b><u>Contact Info</u></b></h5> <i class="fas fa-list  ml-2 mt-1" style="font-size: larger; color: orangered;"></i>
+                        </div>
+                        <p>Stay updated and connected.</p>
+                        <ul class="list-unstyled d-block">
+                            <li class="mr-1" data-toggle="modal" data-target="#facebookModal"><i class="fab fa-facebook"></i> @Serxe Graal</li>
+                            <li class="mr-1" data-toggle="modal" data-target="#twitterModal"><i class="fab fa-twitter"></i> @SerxeGraal</li>
+                            <li class="mr-1" data-toggle="modal" data-target="#instagramModal"><i class="fab fa-instagram"></i> @serxegraal</li>
+                            <li class="mr-1" data-toggle="modal" data-target="#telegramModal"><i class="fab fa-telegram"></i> @serxegraal</li>
+                            <li><i class="fab fa-google "></i> serxegraal@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <p>&copy; 2024 Serxe Graal. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+
+
+    <!----MODALLSS----->
+    <!-- Twitter Modal -->
+    <div class="modal fade" id="twitterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border: 1px solid orangered;">
+                <div class="modal-header border-0" style="background-color: #1E1E1E;">
+                    <h5 class="modal-title text-light" id="exampleModalLabel">Twitter / X <i class="fab fa-twitter"></i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="card" style="border: none;background: none;">
+                            <center>
+                                <img src="img/p1.jpg" width="300" height="300">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center text-light"><b>Twitter Account</b></h4>
+                                    <p class="card-text text-center text-light"><b>@SerxeGraal</b></p>
+                                    <a href="https://x.com/SerxeGraal?t=q9loTmp2XpVYq1Qj-X0iHQ&s=09" id="btn" class="btn" style="border: 2px solid orangered; color: orangered;">
+                                        <b >View Link </b> <i class="fas fa-link"></i>
+                                    </a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Facebook Modal -->
+    <div class="modal fade" id="facebookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border: 1px solid orangered;">
+                <div class="modal-header border-0" style="background-color: #1E1E1E;">
+                    <h5 class="modal-title" id="exampleModalLabel">Facebook <i class="fab fa-facebook"></i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="border-top: 1px solid black;">
+                    <div class="container">
+                        <div class="card" style="border: none; background: none;">
+                            <center>
+                                <img src="img/p1.jpg" width="300" height="300">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center text-light"><b>Facebook Account</b></h4>
+                                    <p class="card-text text-center text-light"><b>@Serxe Graal</b></p>
+                                    <a href="https://www.facebook.com/share/4gZ2cYUqfw2N4xEr/?mibextid=qi2Omg" id="btn" class="btn " style="color: orangered; border: 2px solid orangered">
+                                        <b>View Link </b> <i class="fas fa-link"></i>
+                                    </a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Instagram Modal -->
+    <div class="modal fade" id="instagramModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border: 1px solid orangered;">
+                <div class="modal-header border-0" style="background-color: #1E1E1E;">
+                    <h5 class="modal-title" id="exampleModalLabel">Instagram <i class="fab fa-instagram"></i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="card" style="border: none; background: none;">
+                            <center>
+                                <img src="img/p1.jpg" width="300" height="300">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center text-light"><b>Instagram Account</b></h4>
+                                    <p class="card-text text-center text-light"><b>@serxegraal</b></p>
+                                    <a href="https://www.instagram.com/serxegraal?igsh=ZGUzMzM3NWJiOQ==" class="btn " id="btn" style="color:#FF4500; border: 2px solid orangered;">
+                                        <b>View Link </b> <i class="fas fa-link"></i>
+                                    </a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Telegram Modal -->
+    <div class="modal fade" id="telegramModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0" style="background-color: #1E1E1E;">
+                    <h5 class="modal-title" id="exampleModalLabel">Telegram <i class="fab fa-telegram"></i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="card" style="border: none; background: none;">
+                            <center>
+                                <img src="img/p1.jpg" width="300" height="300">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center text-light"><b>Telegram Account</b></h4>
+                                    <p class="card-text text-center text-light"><b>@serxegraal (+63 9518298470)</b></p>
+
+                                    <img src="img/qrcode.png" width="100%" height="100%" style="border-radius: 50px;" class="card-img">
+
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--<script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>-->
+
+    <script>
+        // JavaScript to handle navbar item click event and update active state
+        $(document).ready(function() {
+            $('.nav-link').on('click', function() {
+                $('.nav-item').removeClass('active'); // Remove active class from all navbar items
+                $(this).closest('.nav-item').addClass('active'); // Add active class to the clicked navbar item
+            });
+        });
+    </script>
+</body>
+
+</html>
